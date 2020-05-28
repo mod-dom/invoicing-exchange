@@ -1,0 +1,20 @@
+App.json and Launch.json - structure definition on a link
+----------------------------------------------------------------
+https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-json-files
+
+
+Gitignore file - tutorial
+----------------------------------------------------------------
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+Readme.md file - what, why, who when, where and how on a link
+----------------------------------------------------------------
+https://www.makeareadme.com/
+
+Code Analysis Tool - purpose and how to enable it in your project on a link
+-----------------------------------------------------------------------------
+https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-using-code-analysis-tool
+
+Rules and Guidelines for AL Code on a link
+https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/compliance/apptest-overview
+
