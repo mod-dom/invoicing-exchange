@@ -1,0 +1,8 @@
+﻿{
+    "branchId":  "436bab17-2b24-472e-b250-7477c17a45b0",
+    "navSolution":  "W1",
+    "projectName":  "Inv-Exch",
+    "navVersion":  "16.0.0.0",
+    "dockerImage":  "mcr.microsoft.com/businesscentral/sandbox:16.1.12629.13468-w1",
+    "dockerShared":  ""
+}
