@@ -1,4 +1,4 @@
-table 50130 "InExch Service Setup"
+table 50130 "InExc Service Setup"
 {
     DataClassification = CustomerContent;
     Caption = 'Electronic Invoice Exchange Service Setup';
@@ -96,7 +96,7 @@ table 50130 "InExch Service Setup"
 
     local procedure SetEnableProperty()
     var
-        InvoiceExchange: Codeunit "InExch Service Setup Mgt";
+        InvoiceExchange: Codeunit "InExc Service Setup Mgt";
     begin
         InvoiceExchange.SelectJustOneEnabled(Rec);
     end;

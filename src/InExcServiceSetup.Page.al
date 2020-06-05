@@ -1,9 +1,9 @@
-page 50130 "InExch Service Setup"
+page 50130 "InExc Service Setup"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "InExch Service Setup";
+    SourceTable = "InExc Service Setup";
     Caption = 'Electronic Invoice Exchange Service Setup';
 
     layout
@@ -70,7 +70,7 @@ page 50130 "InExch Service Setup"
     }
     trigger OnAfterGetRecord()
     var
-        InvoiceExchange: Codeunit "InExch Service Setup Mgt";
+        InvoiceExchange: Codeunit "InExc Service Setup Mgt";
     begin
         InvoiceExchange.CheckEndPointEnabled(IsEnabledEndPoint, IsEnabledSandBoxEndPoint, Rec);
     end;
