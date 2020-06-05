@@ -1,0 +1,11 @@
+{
+    "name": "Invoice Exchange ruleset",
+    "description": "Invoice Exchange Custom Code Analysis Ruleset",
+    "rules": [
+        {
+            "id": "AA0214",
+            "action": "None",
+            "justification": "Ignored"
+        }
+    ]
+}
