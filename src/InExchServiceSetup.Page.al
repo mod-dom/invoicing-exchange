@@ -1,9 +1,9 @@
-page 50130 InExcElInvoiceExcSetup
+page 50130 "InExch Service Setup"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = InExcElInvoiceExcSetup;
+    SourceTable = "InExch Service Setup";
     Caption = 'Electronic Invoice Exchange Service Setup';
 
     layout
@@ -47,7 +47,7 @@ page 50130 InExcElInvoiceExcSetup
                     ToolTip = 'If Enabled then Update Enable/Disable Sandbox User';
                     trigger OnValidate()
                     begin
-                        InvoiceExchange.CheckEndPointEnabled(IsEnabledEndPoint, IsEnabledSandBoxEndPoint, Rec);
+                        CurrPage.Update();
                     end;
                 }
                 field("Service Provider"; "Service Provider")
@@ -69,12 +69,14 @@ page 50130 InExcElInvoiceExcSetup
         }
     }
     trigger OnAfterGetRecord()
+    var
+        InvoiceExchange: Codeunit "InExch Service Setup Mgt";
     begin
         InvoiceExchange.CheckEndPointEnabled(IsEnabledEndPoint, IsEnabledSandBoxEndPoint, Rec);
     end;
 
     var
-        InvoiceExchange: Codeunit InExcElInvoiceExchange;
+
         IsEnabledEndPoint: Boolean;
         IsEnabledSandBoxEndPoint: Boolean;
 

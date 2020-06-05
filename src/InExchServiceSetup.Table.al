@@ -1,4 +1,4 @@
-table 50130 InExcElInvoiceExcSetup
+table 50130 "InExch Service Setup"
 {
     DataClassification = CustomerContent;
     Caption = 'Electronic Invoice Exchange Service Setup';
@@ -23,23 +23,19 @@ table 50130 InExcElInvoiceExcSetup
             DataClassification = CustomerContent;
             Caption = 'Enabled';
             trigger OnValidate()
-            var
-                InvoiceExchange: Codeunit InExcElInvoiceExchange;
-            begin
-                InvoiceExchange.SelectJustOneEnabled(Rec);
 
+            begin
+                SetEnableProperty();
             end;
         }
         field(4; Endpoint; Text[100])
         {
             DataClassification = CustomerContent;
-            Description = 'Field to enter URL for Invoice Sending';
             Caption = 'Endpoint';
         }
         field(5; "Sandbox Endpoint"; Text[100])
         {
             DataClassification = CustomerContent;
-            Description = 'Field to enter URL for Invoice Sending to test web service';
             Caption = 'Sandbox Endpoint';
         }
 
@@ -52,7 +48,6 @@ table 50130 InExcElInvoiceExcSetup
         field(7; "Service Provider"; Text[100])
         {
             DataClassification = CustomerContent;
-            Description = 'Field to enter link to the provider';
             Caption = 'Service Provider';
             ExtendedDatatype = URL;
         }
@@ -60,7 +55,6 @@ table 50130 InExcElInvoiceExcSetup
         field(8; "Terms of Use"; Text[100])
         {
             DataClassification = CustomerContent;
-            Description = 'Field to enter link to the terms of use of the App';
             Caption = 'Terms of Use';
             ExtendedDatatype = URL;
         }
@@ -98,6 +92,13 @@ table 50130 InExcElInvoiceExcSetup
     trigger OnRename()
     begin
 
+    end;
+
+    local procedure SetEnableProperty()
+    var
+        InvoiceExchange: Codeunit "InExch Service Setup Mgt";
+    begin
+        InvoiceExchange.SelectJustOneEnabled(Rec);
     end;
 
 }
