@@ -1,10 +1,10 @@
-page 50100 "InExc Credential Setup"
+page 50100 "InExc User Setup"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "InExc Credential Setup";
-    Caption = 'Electronic Invoice Exchange Credential Setup';
+    SourceTable = "InExc User Setup";
+    Caption = 'Electronic Invoice Exchange User Setup';
 
     layout
     {

@@ -5,6 +5,14 @@ Create new funcionality for electronic invoice exchange.
 
 ## invoicing exchange user service setup
 
+The essence of this feature is that we can define credentials for each user at the level for one or more services.
+
+This setup page is a type list and can be used to create users with their privacy parameters.
+
+The structure of the table itself, more precisely the primary key, is like that the same user can be defined on several rows.
+
+Created Event Subscriber OnAfterDeleteEvent with which when user deleted on User setup page record, automatically will be deleted all related data from this table/page.
+
 # Invoicing-exchange
 Invoicing document exchange
 

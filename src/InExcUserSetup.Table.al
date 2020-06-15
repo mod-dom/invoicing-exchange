@@ -1,7 +1,7 @@
-table 50100 "InExc Credential Setup"
+table 50100 "InExc User Setup"
 {
     DataClassification = CustomerContent;
-    Caption = 'Electronic Invoice Exchange Credential Setup';
+    Caption = 'Electronic Invoice Exchange User Setup';
 
     fields
     {
@@ -30,6 +30,7 @@ table 50100 "InExc Credential Setup"
         field(5; "User Password"; Text[50])
         {
             DataClassification = CustomerContent;
+            ExtendedDatatype = Masked;
             Caption = 'Password';
         }
         field(6; "User Name Sandbox"; Text[50])
@@ -40,6 +41,7 @@ table 50100 "InExc Credential Setup"
         field(7; "User Sandbox Password"; Text[50])
         {
             DataClassification = CustomerContent;
+            ExtendedDatatype = Masked;
             Caption = 'Sandbox Password';
         }
         field(8; Inactive; Boolean)
